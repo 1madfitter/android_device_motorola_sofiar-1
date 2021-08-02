@@ -55,7 +55,7 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_SOURCE := kernel/motorola/trinket
+TARGET_KERNEL_SOURCE := kernel/motorola/sm6125
 TARGET_KERNEL_CONFIG := vendor/sofiar_defconfig
 TARGET_KERNEL_VERSION := 4.14
 TARGET_KERNEL_CLANG_COMPILE := true
@@ -113,7 +113,6 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
-# include vendor/omni/sepolicy/sepolicy.mk
 include device/qcom/sepolicy/SEPolicy.mk
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
